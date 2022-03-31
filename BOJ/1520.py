@@ -1,6 +1,7 @@
 # https://www.acmicpc.net/problem/1520
 # GOLD IV
 
+# dfs+dp
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
@@ -12,8 +13,10 @@ dx, dy = [1, -1, 0, 0], [0, 0, 1, -1]
 
 
 def dfs(x, y):
+    # Base Case
     if x == M-1 and y == N-1:
         return 1
+    # Visited Case
     if dp[x][y] != -1:
         return dp[x][y]
     dp[x][y] = 0
