@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/2294
+# 동전 2
 # SILVER I
 
 n, k = map(int, input().split())
