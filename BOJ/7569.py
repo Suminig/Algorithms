@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/7569
+# 토마토 (3차원 배열)
 # GOLD V
 
 # 7576 토마토랑 똑같지만 3차원 배열 사용시 indexError 조심
