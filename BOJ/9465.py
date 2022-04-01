@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/9465
+# 스티커
 # SILVER 1
 
 T = int(input())
