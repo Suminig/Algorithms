@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/1890
+# 점프
 # SILVER II
 
 # DFS로 풀어봤는데 시간초과 --> DP로 해결
