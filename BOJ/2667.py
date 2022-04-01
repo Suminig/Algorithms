@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/2667
+# 단지번호붙이기
 # SILVER I
 
 n = int(input())
