@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/2293
+# 동전 1
 # GOLD V
 
 n, k = map(int, input().split())
