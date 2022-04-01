@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/2133
+# 타일 채우기
 # GOLD V
 
 N = int(input())
