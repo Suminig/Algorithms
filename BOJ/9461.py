@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/9461
+# 파도반 수열
 # SILVER III
 
 T = int(input())
