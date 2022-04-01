@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/7576
+# 토마토 (2차원 배열)
 # GOLD V
 
 import sys
