@@ -1,6 +1,6 @@
 # https://www.acmicpc.net/problem/1260
-# SILVER III
 # DFS와 BFS
+# SILVER III
 
 import sys
 from collections import deque
