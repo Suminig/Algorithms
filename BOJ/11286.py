@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/11286
+# 절댓값 힙
 # SILVER I
 
 import sys
