@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/1520
+# 내리막 길
 # GOLD IV
 
 # dfs+dp
