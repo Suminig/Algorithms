@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/2002
+# 추월
 # Silver I
 
 n = int(input())
