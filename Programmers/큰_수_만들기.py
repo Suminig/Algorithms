@@ -1,4 +1,5 @@
-#https://programmers.co.kr/learn/courses/30/lessons/42883#
+# https://programmers.co.kr/learn/courses/30/lessons/42883#
+# 탐욕법(Greedy)
 # LEVEL 2
 
 def solution(number, k):
