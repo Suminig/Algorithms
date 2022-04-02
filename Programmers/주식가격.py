@@ -1,4 +1,5 @@
 # https://programmers.co.kr/learn/courses/30/lessons/42584
+# 스택/큐
 # LEVEL 2
 
 def solution(prices):
