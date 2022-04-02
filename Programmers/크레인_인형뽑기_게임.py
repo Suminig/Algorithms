@@ -1,4 +1,5 @@
 # https://programmers.co.kr/learn/courses/30/lessons/64061
+# 2019 카카오 개발자 겨울 인턴십
 # LEVEL 1
 
 def solution(board, moves):
