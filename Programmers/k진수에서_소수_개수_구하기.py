@@ -1,4 +1,5 @@
 # https://programmers.co.kr/learn/courses/30/lessons/92335
+# 2022 KAKAO BLIND RECRUITMENT
 # LEVEL 2
 
 def k_num(n, k):
