@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class Solution {
 	private long maxNum = 0;
