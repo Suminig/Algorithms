@@ -4,59 +4,44 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
 	private static StringTokenizer st;
 	private static StringBuilder sb = new StringBuilder();
 
-	private static class Node {
-		int num;
-		ArrayList<Integer> connected = new ArrayList<>();
-
-		public Node(int num) {
-			this.num = num;
-		}
-
-		public void add(int x) {
-			connected.add(x);
-		}
-
-		public ArrayList<Integer> getList() {
-			return connected;
-		}
-	}
-
 	public static void main(String[] args) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		int N = Integer.parseInt(in.readLine());
-		Node[] tree = new Node[N + 1];
+		ArrayList<Integer>[] adjList = new ArrayList[N + 1];
 		for (int i = 1; i <= N; i++) {
-			tree[i] = new Node(i);
+			adjList[i] = new ArrayList<>();
 		}
 
 		for (int i = 0; i < N - 1; i++) {
 			st = new StringTokenizer(in.readLine(), " ");
 			int A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
-			tree[A].add(B);
-			tree[B].add(A);
+
+			adjList[A].add(B);
+			adjList[B].add(A);
 		}
 
+		Queue<Integer> q = new ArrayDeque<>();
 		int[] visited = new int[N + 1];
-		Deque<Node> q = new ArrayDeque<>();
-		q.add(tree[1]);
-		visited[1] = 1;
+		q.offer(1);
+		visited[1] = -1;
 
 		while (!q.isEmpty()) {
-			Node cur = q.poll();
-			for (Integer x : cur.getList()) {
-				if (visited[x] == 0) {
-					visited[x] = cur.num;
-					q.add(tree[x]);
+			int cur = q.poll();
+
+			for (int next : adjList[cur]) {
+				if (visited[next] == 0) {
+					visited[next] = cur;
+					q.offer(next);
 				}
 			}
 		}
@@ -68,5 +53,6 @@ public class Main {
 		out.write(sb.toString());
 		out.flush();
 		out.close();
+		in.close();
 	}
 }
