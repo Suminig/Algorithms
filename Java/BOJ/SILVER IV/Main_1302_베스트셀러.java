@@ -1,37 +1,47 @@
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
+	private static StringBuilder sb = new StringBuilder();
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(in.readLine());
-		Map<String, Integer> map = new HashMap<String, Integer>();
+		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 
+		HashMap<String, Integer> books = new HashMap<>();
+
+		int N = Integer.parseInt(in.readLine());
 		for (int i = 0; i < N; i++) {
 			String book = in.readLine();
-			if (map.containsKey(book))
-				map.put(book, map.get(book) + 1);
+
+			if (books.containsKey(book))
+				books.put(book, books.get(book) + 1);
 			else
-				map.put(book, 1);
+				books.put(book, 1);
 		}
 
-		String[] books = new String[map.keySet().size()];
-		map.keySet().toArray(books);
-		Arrays.sort(books);
+		String[] titles = new String[books.keySet().size()];
+		books.keySet().toArray(titles);
+		Arrays.sort(titles);
 
 		int max = 0;
-		String maxBook = "";
-		for (String b : books) {
-			if (map.get(b) > max) {
-				max = map.get(b);
-				maxBook = b;
+		String res = "";
+		for (String title : titles) {
+			if (books.get(title) > max) {
+				max = books.get(title);
+				res = title;
 			}
 		}
-		System.out.println(maxBook);
+
+		sb.append(res);
+
+		out.write(sb.toString());
+		out.flush();
+		out.close();
+		in.close();
 	}
 }
