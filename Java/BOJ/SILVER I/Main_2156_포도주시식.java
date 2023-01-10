@@ -34,6 +34,5 @@ public class Main {
 		out.write(sb.toString());
 		out.flush();
 		out.close();
-		in.close();
 	}
 }
